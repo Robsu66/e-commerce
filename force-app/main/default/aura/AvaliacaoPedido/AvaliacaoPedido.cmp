@@ -1,0 +1,18 @@
+<aura:component controller="AvaliacaoPedidoController" access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    
+    <aura:attribute name="value" type="String" default=""/>
+    <lightning:card  title="Avaliar Pedido">
+        <div class="slds-p-horizontal_small">
+            <lightning:select name="select1" value="{!v.value}" label="Avalie seu pedido" required="true">
+                <option value="">Escolha a Nota</option>
+                <option value="1">1 - Muito Ruim</option>
+                <option value="2">2 - Ruim</option>
+                <option value="3">3 - Médio</option>
+                <option value="4">4 - Bom</option>
+                <option value="5">5 - Muito Bom</option>
+            </lightning:select>
+            <lightning:button label="Enviar" type="submite" onclick="{!c.handleClick}"/>
+        </div>
+        
+    </lightning:card>
+</aura:component>

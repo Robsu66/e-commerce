@@ -1,0 +1,11 @@
+<aura:component access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    
+    <lightning:card title="Selecionar Forma de Pagamento">
+        <div class="slds-p-horizontal_small">
+            <lightning:recordEditForm aura:id="ProdutoPedido" objectApiName="Order" recordId="{!v.recordId}" onsubmit="{!c.handleSubmit}" onsuccess="{!c.handleSuccess}" onerror="{!c.handleError}">
+                <lightning:inputField fieldName="FormaPagamento2__c" />
+                <lightning:button class="slds-m-top_small" type="submit" label="Confirmar" />
+            </lightning:recordEditForm>
+        </div>
+    </lightning:card>
+</aura:component>
