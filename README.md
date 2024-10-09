@@ -2,6 +2,12 @@
 
 Este projeto é uma implementação de uma plataforma de e-commerce utilizando Salesforce, com o objetivo de explorar as funcionalidades da plataforma, como triggers, Apex, SOQL, Communities, e outros recursos relevantes para o desenvolvimento de um sistema de vendas online.
 
+## Índice
+1. [Requisitos](#requisitos)
+2. [Estrutura do Projeto](#estrutura-do-projeto)
+3. [Fotos do Projeto](#fotos-do-projeto)
+
+
 ## Requisitos
 
 ### **Cadastro de Produtos:**
