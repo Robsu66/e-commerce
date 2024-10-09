@@ -1,18 +1,77 @@
-# Salesforce DX Project: Next Steps
+# E-commerce Salesforce
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Este projeto é uma implementação de uma plataforma de e-commerce utilizando Salesforce, com o objetivo de explorar as funcionalidades da plataforma, como triggers, Apex, SOQL, Communities, e outros recursos relevantes para o desenvolvimento de um sistema de vendas online.
 
-## How Do You Plan to Deploy Your Changes?
+## Requisitos
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+### **Cadastro de Produtos:**
+- Nome
+- SKU (Código de Identificação)
+- Preço
+- Quantidade em Estoque
 
-## Configure Your Salesforce DX Project
+### **Cadastro de Clientes**
+- Nome
+- Endereço
+- Telefone
+- E-mail
+- Forma de Pagamento Preferencial (Cartão, Pix, Boleto, Cheque)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### **Criação de Pedido**
+- Data do Pedido
+- Produtos
+- Valor Total
+- Status do Pedido: Em Carrinho / Definir Forma de Pagamento / Pedido Concluído
 
-## Read All About It
+### **Regras de Negócio**
+- **Gestão de Produtos**: Controle de estoque e listagem de produtos.
+- **Gestão de Pedidos**: Criação, atualização e cancelamento de pedidos.
+- **Automação de Processos**: Implementação de triggers para automatizar fluxos de negócios, como controle de estoque e validação de pedidos.
+- **Avaliação de Compras**: Envio de pesquisas de satisfação após a conclusão de pedidos, permitindo que os clientes avaliem suas compras.
+- **Pagamento**: Processos de definir e validar formas de pagamento em diferentes etapas do pedido.
+- **Communities**: Utilização do Salesforce Communities para permitir que os clientes acompanhem seus pedidos e façam avaliações.
+- **Integração de Email**: Envio de e-mails automáticos para confirmação de compra, lembretes e atualizações de status do pedido.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Estrutura do Projeto
+
+- **Apex Classes**
+  - `OrderController`: Controla as ações relacionadas aos pedidos, como criação e fechamento de pedidos.
+  - `PagamentoPadraoHelper`: Gerencia as formas de pagamento preferenciais.
+  - `ControleQuantidadeHelper`: Valida a quantidade disponível em estoque.
+  - `AvaliarPedidoController`: Lida com a lógica de avaliação de pedidos.
+  
+- **Triggers**
+  - `ControleQuantidade`: Valida o estoque no momento da compra.
+  - `ValidaData`: Garante que os pedidos não sejam criados com datas anteriores à data atual.
+  
+- **Componentes Aura**
+  - Formulários para atualização de status de pedidos, envio de avaliações e visualização de detalhes do pedido.
+  
+- **SOQL Queries**
+  - Consultas de dados para verificar o estoque, buscar informações de produtos e gerenciar pedidos em tempo real.
+
+## Fotos do Projeto
+
+**Validação da Conta**
+![conta_validacao](images/conta_validacao.png)
+
+**Validação do Produto**
+![produto_validacao](images/produto_validacao.png)
+
+**Validação de Data**
+![data_validacao](images/data_validacao.png)
+
+**Validação de Pedido**
+![pedido_validacao](images/pedido_validacao.png)
+
+**Validação de Pedido Paralelo**
+![pedido_paralelo_validacao](images/em_carrinho_validacao.png)
+
+**E-mail de Estoque**
+![estoque_email](images/estoque_email.png)
+
+**E-mail de Pedido**
+![pedido_email](images/pedido_email.png)
+
+**Avaliação do Pedido**
+![avaliacao](images/avaliacao.png)
