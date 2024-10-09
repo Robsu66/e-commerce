@@ -2,6 +2,11 @@
 
 Este projeto é uma implementação de uma plataforma de e-commerce utilizando Salesforce, com o objetivo de explorar as funcionalidades da plataforma, como triggers, Apex, SOQL, Communities, e outros recursos relevantes para o desenvolvimento de um sistema de vendas online.
 
+## Índice
+1. [Requisitos](#requisitos)
+2. [Estrutura do Projeto](#estrutura-do-projeto)
+3. [Fotos do Projeto](#fotos-do-projeto)
+
 ## Requisitos
 
 ### **Cadastro de Produtos:**
@@ -52,7 +57,7 @@ Este projeto é uma implementação de uma plataforma de e-commerce utilizando S
 - **Validações em Salesforce**
   - Algumas das validações foram feitas nos próprios objetos, como o e-mail e SKU únicos, o da data de pedido foi feita através das regras de validação.
 
-## Fotos do Projeto
+## **Fotos do Projeto**
 
 **Validação da Conta**
 - Validação realizada no campo E-mail do cadastro, ele deve ser único.
