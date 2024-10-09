@@ -2,11 +2,6 @@
 
 Este projeto é uma implementação de uma plataforma de e-commerce utilizando Salesforce, com o objetivo de explorar as funcionalidades da plataforma, como triggers, Apex, SOQL, Communities, e outros recursos relevantes para o desenvolvimento de um sistema de vendas online.
 
-## Índice
-1. [Requisitos](#requisitos)
-2. [Estrutura do Projeto](#estrutura-do-projeto)
-3. [Fotos do Projeto](#fotos-do-projeto)
-
 ## Requisitos
 
 ### **Cadastro de Produtos:**
@@ -57,27 +52,35 @@ Este projeto é uma implementação de uma plataforma de e-commerce utilizando S
 - **Validações em Salesforce**
   - Algumas das validações foram feitas nos próprios objetos, como o e-mail e SKU únicos, o da data de pedido foi feita através das regras de validação.
 
-## **Fotos do Projeto**
+## Fotos do Projeto
 
 **Validação da Conta**
 - Validação realizada no campo E-mail do cadastro, ele deve ser único.
 
 ![conta_validacao](images/conta_validacao.png)
 
+---
+
 **Validação do Produto**
 - Validação realizada no SKU do Produto, ele deve ser único.
 
 ![produto_validacao](images/produto_validacao.png)
+
+---
 
 **Validação de Data**
 - Validação realizada na data do pedido, ela não pode ser anterior ao dia atual.
 
 ![data_validacao](images/data_validacao.png)
 
+---
+
 **Validação de Pedido**
 - Aqui é feita uma verificação no estoque onde se o pedido tiver mais itens do que o númerom disponível de produtos é retornado um erro de feedback para o usuário
 
 ![pedido_validacao](images/pedido_validacao.png)
+
+---
 
 **Validação de Pedido Paralelo**
 - Uma verificação também é feita durante a confirmação do pedido para caso haja uma transação em paralelo, caso um pedido seja fechado e a dedução faça o número de pedidos ficar inferior ao de algum pedido em paralelo um erro também será retornado
@@ -86,15 +89,21 @@ Este projeto é uma implementação de uma plataforma de e-commerce utilizando S
 
 ![pedido_paralelo_validacao](images/em_carrinho_validacao.png)
 
+---
+
 **E-mail de Estoque**
 - Quando o estoque de algum produto é zerado, um E-mail é enviado para o administrador do sistema onde é informado qual produto foi zerado
 
 ![estoque_email](images/estoque_email.png)
 
+---
+
 **E-mail de Pedido**
 - Quando o pedido é concluído, um E-mail é enviado para o Cliente associado ao pedido a partir do endereço E-mail preenchido no cadastro da Conta 
 
 ![pedido_email](images/pedido_email.png)
+
+---
 
 **Avaliação do Pedido**
 - Esta é a área de avaliação do pedido, quando ela é feita há um alert de feedback para o usuário e o valor dado por ele é colocado no campo "Avaliação" presente no pedido
